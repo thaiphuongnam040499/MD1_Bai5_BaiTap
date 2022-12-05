@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình tròn</title>
+</head>
+<body>
+<input type="text" id="ban-kinh">
+<button type="button" onclick="showMassage()">ĐÁ VÀO MÔNG TÔI</button>
+<p id="ket-qua">Diện tích hình tròn là:</p>
+<script>
+  function showMassage(){
+    let R= +document.getElementById('ban-kinh').value;
+    let S= R**2*Math.PI;
+    document.getElementById('ket-qua').innerHTML='Diện tích hình tròn là: '+S;
+  }
+</script>
+</body>
+</html>

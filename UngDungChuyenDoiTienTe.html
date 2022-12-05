@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>From Currency</th>
+    <th>To Currency</th>
+  </tr>
+  <tr>
+    <td><input type="text" id="tien"></td>
+    <td>
+      <select id="From-Currency">
+        <option value="VietNam">Việt Nam</option>
+        <option value="My">Mỹ</option>
+      </select>
+    </td>
+    <td>
+      <select id="To-Currency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+      </select>
+    </td>
+    <td><Button type="button" onclick="curencyConversion()">ĐÁ VÀO MÔNG TÔI</Button></td>
+  </tr>
+</table>
+<p id="ket-qua">Kết quả:</p>
+<script>
+  function curencyConversion(){
+    let Amount= +document.getElementById('tien').value;
+    let VND= Amount/0.000042;
+    let USD= Amount*23975;
+    document.getElementById('From-Currency').value="VietNam"
+    document.getElementById('To-Currency').value="USD"
+    document.getElementById('ket-qua').innerHTML='Kết quả: ' +USD
+    document.getElementById('From-Currency').value="My"
+    document.getElementById('To-Currency').value="VND"
+    document.getElementById('ket-qua').innerHTML='Kết quả: ' +VND
+  }
+</script>
+</body>
+</html>

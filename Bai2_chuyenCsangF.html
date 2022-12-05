@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển độ C sang độ F</title>
+</head>
+<body>
+Độ C:
+<input type="text" id="do-C">
+<button type="button" onclick="showMassage()">Đá vào mông tôi</button>
+<p id="ket-qua">Kết quả</p>
+<script>
+    function showMassage(){
+        let C= +document.getElementById('do-C').value;
+        let F=32+9*C/5
+        document.getElementById('ket-qua').innerHTML='Độ F là: '+F;
+    }
+</script>
+</body>
+</html>

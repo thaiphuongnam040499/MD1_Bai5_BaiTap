@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi hình tròn</title>
+</head>
+<body>
+Bán Kính:
+<input type="text" id="ban-kinh">
+<button type="button" onclick="showMassage()">ĐÁ VÀO MÔNG TÔI</button>
+<p id="ket-qua">Chu vi hình tròn là:</p>
+<script>
+    function showMassage(){
+        let r = +document.getElementById('ban-kinh').value;
+        let C = 2*Math.PI*r;
+        document.getElementById('ket-qua').innerHTML='Chu vi hình tròn là:'+C;
+    }
+</script>
+</body>
+</html>

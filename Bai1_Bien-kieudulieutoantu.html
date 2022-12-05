@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+
+Toán: <input type="text" id="toan">
+<br> <br>
+Lý: <input type="text" id="ly">
+<br> <br>
+Hóa: <input type="text" id="hoa">
+<button type="button" onclick="avg()">Click Me</button>
+<p id="ket-qua">Kết quả</p>
+<script>
+  function avg(){
+    let toan= +document.getElementById('toan').value;
+    console.log(toan)
+    let ly= +document.getElementById('ly').value;
+    console.log(ly)
+    let hoa= +document.getElementById('hoa').value;
+    console.log(hoa)
+    let avg= (toan+ly+hoa)/3
+    console.log(avg)
+    document.getElementById('ket-qua').innerHTML='Điểm trung bình: '+ avg;
+  }
+
+</script>
+</body>
+</html>
