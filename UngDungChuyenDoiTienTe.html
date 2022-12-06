@@ -14,32 +14,37 @@
   <tr>
     <td><input type="text" id="tien"></td>
     <td>
-      <select id="From-Currency">
-        <option value="VietNam">Việt Nam</option>
-        <option value="My">Mỹ</option>
+      <select id="FromCurrency">
+        <option value="VND">Việt Nam</option>
+        <option value="USD">Mỹ</option>
       </select>
     </td>
     <td>
-      <select id="To-Currency">
-        <option value="USD">USD</option>
+      <select id="ToCurrency">
         <option value="VND">VND</option>
+        <option value="USD">USD</option>
       </select>
     </td>
     <td><Button type="button" onclick="curencyConversion()">ĐÁ VÀO MÔNG TÔI</Button></td>
   </tr>
 </table>
-<p id="ket-qua">Kết quả:</p>
+<p id="result">Kết quả:</p>
 <script>
   function curencyConversion(){
     let Amount= +document.getElementById('tien').value;
-    let VND= Amount/0.000042;
-    let USD= Amount*23975;
-    document.getElementById('From-Currency').value="VietNam"
-    document.getElementById('To-Currency').value="USD"
-    document.getElementById('ket-qua').innerHTML='Kết quả: ' +USD
-    document.getElementById('From-Currency').value="My"
-    document.getElementById('To-Currency').value="VND"
-    document.getElementById('ket-qua').innerHTML='Kết quả: ' +VND
+    let FromCurrency= document.getElementById('FromCurrency').value;
+    let ToCurrency= document.getElementById('ToCurrency').value;
+    let ketqua = document.getElementById('result');
+    if (FromCurrency === ToCurrency){
+      ketqua = Amount
+    }else {
+      if ((FromCurrency ==='USD')){
+        ketqua = Amount/23000;
+      }else {
+        ketqua = Amount*23000;
+      }
+    }
+    document.getElementById('result').innerHTML = 'Kết quả: ' + ketqua + " " + ToCurrency
   }
 </script>
 </body>
